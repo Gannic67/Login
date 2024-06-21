@@ -30,7 +30,7 @@ def get_registration() -> None:
     except FileNotFoundError:
         with open('Base', 'a', encoding='utf-8'):
             pass
-        get_registration()
+        get_login()
 
 
 def get_login() -> None:
