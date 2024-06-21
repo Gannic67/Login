@@ -27,6 +27,10 @@ def get_registration() -> None:
             file.write(f'{login}:{password}\n')
     except ValueError:
         print('Вы ввели буквы, а надо цифры')
+    except FileNotFoundError:
+        with open('Base', 'a', encoding='utf-8'):
+            pass
+        get_registration()
 
 
 def get_login() -> None:
